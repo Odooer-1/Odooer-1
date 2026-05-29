@@ -88,7 +88,7 @@
 
 <div align="center">
 
-### 🎯 Mission
+###  Mission
 
 > Transform businesses through automation, digital transformation, and scalable ERP solutions.
 
