@@ -172,15 +172,20 @@
 
 ---
 
-# 📊 GitHub Statistics
+
+# GitHub Statistics
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Odooer-1&show_icons=true&theme=radical"/>
+<img src="https://media.tenor.com/qJ5evVs-_uUAAAAC/coding.gif" width="500"/>
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Odooer-1&layout=compact&theme=radical"/>
+<br>
+
+### 🚀 Odoo Developer • ERP Consultant • Automation Expert
 
 </div>
+```
+
 
 ---
 
@@ -208,9 +213,10 @@
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=Odooer-1&theme=radical&row=2&column=4"/>
+<img src="https://github-profile-trophy.vercel.app/?username=Odooer-1&theme=radical&no-frame=true&no-bg=true&margin-w=15&margin-h=15&row=2&column=4" />
 
 </div>
+```
 
 ---
 
