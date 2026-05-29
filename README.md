@@ -17,29 +17,88 @@
 
 ![](https://img.shields.io/github/stars/Odooer-1?style=for-the-badge)
 
-</div>
 
----
+
+<div align="center">
 
 # 👨‍💻 About Me
 
-```yaml
-Name: Odooer
-Role: Odoo ERP Consultant & Developer
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=30&pause=1000&color=714B67&center=true&vCenter=true&width=1000&lines=👋+Hi%2C+I'm+Odooer;🚀+Odoo+ERP+Consultant+%26+Developer;⚡+Business+Automation+Specialist;🌍+Digital+Transformation+Partner;📈+Building+Scalable+ERP+Solutions" />
 
-Specialization:
-  - Odoo ERP Implementation
-  - Odoo Enterprise
-  - Odoo Community
-  - Custom Development
-  - Business Process Automation
-  - ERP Consulting
-  - Website Development
+</div>
 
-Mission:
-  Empower businesses through
-  automation, digital transformation,
-  and scalable ERP solutions.
+<br>
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center">🚀</td>
+<td><b>Role</b></td>
+<td>Odoo ERP Consultant & Developer</td>
+</tr>
+
+<tr>
+<td align="center">⚙️</td>
+<td><b>Specialization</b></td>
+<td>Odoo ERP Implementation</td>
+</tr>
+
+<tr>
+<td align="center">🏢</td>
+<td><b>Platform</b></td>
+<td>Odoo Enterprise & Community</td>
+</tr>
+
+<tr>
+<td align="center">💻</td>
+<td><b>Development</b></td>
+<td>Custom Module Development</td>
+</tr>
+
+<tr>
+<td align="center">🤖</td>
+<td><b>Automation</b></td>
+<td>Business Process Automation</td>
+</tr>
+
+<tr>
+<td align="center">📊</td>
+<td><b>Consulting</b></td>
+<td>ERP Consulting & Strategy</td>
+</tr>
+
+<tr>
+<td align="center">🌐</td>
+<td><b>Web</b></td>
+<td>Website Development</td>
+</tr>
+
+</table>
+
+</div>
+
+<br>
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=22&pause=1200&color=36BCF7&center=true&vCenter=true&width=1000&lines=Empowering+Businesses+Through+Automation;Driving+Digital+Transformation;Creating+Scalable+ERP+Solutions;Helping+Companies+Grow+with+Odoo;Optimizing+Operations+Without+Limits" />
+
+</div>
+
+<br>
+
+<div align="center">
+
+### 🎯 Mission
+
+> Transform businesses through automation, digital transformation, and scalable ERP solutions.
+
+</div>
+
+
+
+<br clear="right"/>
 ```
 
 ---
