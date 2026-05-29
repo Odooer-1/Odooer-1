@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>odooer — Odoo Developer & ERP Implementor</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#0d0d1a;font-family:'Space Grotesk',sans-serif;color:#e0d6e8;min-height:100vh;padding:24px 16px;}
+.profile{max-width:760px;margin:0 auto;}
+.hero{background:linear-gradient(135deg,#1a0a2e 0%,#2d1b4e 40%,#1a0a2e 100%);border-radius:20px;padding:48px 32px 36px;text-align:center;position:relative;overflow:hidden;margin-bottom:16px;border:1px solid rgba(113,75,103,0.3);}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(113,75,103,0.15) 1px,transparent 1px),linear-gradient(90deg,rgba(113,75,103,0.15) 1px,transparent 1px);background-size:40px 40px;animation:gridMove 8s linear infinite;}
+@keyframes gridMove{0%{transform:translateY(0)}100%{transform:translateY(40px)}}
+.particles{position:absolute;inset:0;pointer-events:none;}
+.particle{position:absolute;width:3px;height:3px;background:#714B67;border-radius:50%;animation:float linear infinite;}
+@keyframes float{0%{transform:translateY(0) translateX(0);opacity:0}20%{opacity:1}80%{opacity:1}100%{transform:translateY(-400px) translateX(var(--dx));opacity:0}}
+.hero-content{position:relative;z-index:2;}
+.avatar{width:88px;height:88px;background:linear-gradient(135deg,#714B67,#9d6b8a);border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:700;color:#fff;border:3px solid rgba(255,255,255,0.15);animation:pulse 3s ease-in-out infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(113,75,103,0.5)}50%{box-shadow:0 0 0 20px rgba(113,75,103,0)}}
+.hero h1{font-size:32px;font-weight:700;color:#fff;margin-bottom:6px;animation:fadeSlideUp 0.6s ease both;}
+.hero .tagline{font-family:'JetBrains Mono',monospace;font-size:13px;color:#9d6b8a;margin-bottom:18px;animation:fadeSlideUp 0.8s ease both;}
+.typing-container{font-family:'JetBrains Mono',monospace;font-size:14px;color:#c9a8c0;height:24px;display:flex;align-items:center;justify-content:center;gap:4px;animation:fadeSlideUp 1s ease both;}
+.cursor{display:inline-block;width:2px;height:16px;background:#714B67;animation:blink 1s step-end infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes fadeSlideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.badges{display:flex;gap:8px;justify-content:center;margin-top:22px;flex-wrap:wrap;animation:fadeSlideUp 1.2s ease both;}
+.badge{padding:5px 14px;border-radius:20px;font-size:12px;font-weight:500;border:1px solid;display:flex;align-items:center;gap:6px;}
+.badge.purple{background:rgba(113,75,103,0.2);border-color:rgba(113,75,103,0.5);color:#c9a8c0;}
+.badge.green{background:rgba(29,158,117,0.2);border-color:rgba(29,158,117,0.4);color:#5DCAA5;}
+.badge.amber{background:rgba(186,117,23,0.2);border-color:rgba(186,117,23,0.4);color:#FAC775;}
+.badge.blue{background:rgba(55,138,221,0.2);border-color:rgba(55,138,221,0.4);color:#85B7EB;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:14px;}
+.card{background:#1a0f2e;border:1px solid rgba(113,75,103,0.25);border-radius:14px;padding:18px;animation:fadeIn 0.6s ease both;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.card h3{font-size:12px;font-weight:500;color:#9d6b8a;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.06em;display:flex;align-items:center;gap:7px;}
+.card h3 i{font-size:16px;}
+.skill-row{margin-bottom:11px;}
+.skill-row:last-child{margin-bottom:0;}
+.skill-header{display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px;}
+.skill-name{color:#c9a8c0;}
+.skill-pct{font-family:'JetBrains Mono',monospace;font-size:11px;color:#714B67;font-weight:700;}
+.bar-bg{height:5px;background:rgba(255,255,255,0.07);border-radius:3px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,#714B67,#9d6b8a);width:0;transition:width 1.4s cubic-bezier(.4,0,.2,1);}
+.timeline{position:relative;padding-left:22px;}
+.timeline::before{content:'';position:absolute;left:7px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,#714B67,transparent);}
+.tl-item{position:relative;margin-bottom:13px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-18px;top:4px;width:9px;height:9px;border-radius:50%;background:#714B67;border:2px solid #1a0f2e;box-shadow:0 0 0 2px rgba(113,75,103,0.4);}
+.tl-ver{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#c9a8c0;}
+.tl-desc{font-size:11px;color:#6b6080;margin-top:2px;}
+.module-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.mod-chip{padding:7px 10px;border-radius:8px;font-size:12px;font-weight:500;display:flex;align-items:center;gap:6px;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;border:1px solid;}
+.mod-chip:hover{transform:translateY(-3px);box-shadow:0 6px 16px rgba(113,75,103,0.3);}
+.mod-chip.finance{background:rgba(113,75,103,0.12);border-color:rgba(113,75,103,0.35);color:#c9a8c0;}
+.mod-chip.ops{background:rgba(29,158,117,0.1);border-color:rgba(29,158,117,0.35);color:#5DCAA5;}
+.mod-chip.sales{background:rgba(186,117,23,0.1);border-color:rgba(186,117,23,0.35);color:#FAC775;}
+.mod-chip.hr{background:rgba(55,138,221,0.1);border-color:rgba(55,138,221,0.35);color:#85B7EB;}
+.mod-chip.tech{background:rgba(226,75,74,0.1);border-color:rgba(226,75,74,0.3);color:#F09595;}
+.mod-chip.proj{background:rgba(131,75,103,0.1);border-color:rgba(131,75,103,0.35);color:#AF9EC9;}
+.code-block{background:#0d0820;border-radius:10px;padding:16px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.9;border:1px solid rgba(113,75,103,0.2);}
+.code-line{opacity:0;transform:translateX(-8px);transition:all 0.35s ease;}
+.code-line.visible{opacity:1;transform:translateX(0);}
+.kw{color:#c792ea;}.fn{color:#82aaff;}.st{color:#c3e88d;}.nm{color:#f78c6c;}.br{color:#89ddff;}
+.offer-row{display:flex;align-items:center;gap:9px;padding:6px 0;border-bottom:1px solid rgba(113,75,103,0.12);font-size:13px;color:#c9a8c0;}
+.offer-row:last-child{border-bottom:none;}
+.offer-row i{font-size:15px;color:#714B67;}
+.stat-card{background:#150b26;border:1px solid rgba(113,75,103,0.2);border-radius:10px;padding:14px;text-align:center;}
+.stat-num{font-size:26px;font-weight:700;color:#fff;font-family:'JetBrains Mono',monospace;}
+.stat-num span{color:#714B67;}
+.stat-label{font-size:11px;color:#6b6080;margin-top:4px;text-transform:uppercase;letter-spacing:0.05em;}
+.contact-row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid rgba(113,75,103,0.12);}
+.contact-row:last-child{border-bottom:none;}
+.contact-icon{width:34px;height:34px;border-radius:9px;background:rgba(113,75,103,0.15);display:flex;align-items:center;justify-content:center;font-size:16px;color:#714B67;flex-shrink:0;}
+.contact-text{font-size:13px;font-weight:500;color:#e0d6e8;}
+.contact-sub{font-size:11px;color:#6b6080;}
+.quote-card{background:linear-gradient(135deg,rgba(113,75,103,0.15),rgba(29,158,117,0.08));border:1px solid rgba(113,75,103,0.3);border-radius:14px;padding:22px 22px 22px 32px;position:relative;overflow:hidden;}
+.quote-card::before{content:'"';position:absolute;left:10px;top:4px;font-size:54px;color:rgba(113,75,103,0.3);font-family:Georgia,serif;line-height:1;}
+.quote-text{font-size:15px;font-style:italic;color:#c9a8c0;line-height:1.7;}
+.quote-author{font-size:12px;color:#6b6080;margin-top:10px;font-family:'JetBrains Mono',monospace;}
+.section-label{font-size:11px;font-weight:600;color:#6b6080;text-transform:uppercase;letter-spacing:0.08em;margin:20px 0 10px;}
+.footer{text-align:center;padding:24px 0 8px;font-size:12px;color:#4a3a5a;font-family:'JetBrains Mono',monospace;}
+.footer span{color:#714B67;}
+</style>
+</head>
+<body>
+<div class="profile">
+
+  <div class="hero">
+    <div class="hero-grid"></div>
+    <div class="particles" id="particles"></div>
+    <div class="hero-content">
+      <div class="avatar">O</div>
+      <h1>odooer</h1>
+      <div class="tagline"># Odoo Developer &amp; ERP Implementor</div>
+      <div class="typing-container">
+        <span id="typed-text"></span><span class="cursor"></span>
+      </div>
+      <div class="badges">
+        <span class="badge purple"><i class="ti ti-brand-python"></i>Python</span>
+        <span class="badge purple"><i class="ti ti-code"></i>OWL / JS</span>
+        <span class="badge green"><i class="ti ti-database"></i>PostgreSQL</span>
+        <span class="badge amber"><i class="ti ti-server"></i>Odoo 14-18</span>
+        <span class="badge blue"><i class="ti ti-brand-docker"></i>Docker</span>
+        <span class="badge green"><i class="ti ti-globe"></i>REST API</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">At a glance</div>
+  <div class="grid-3">
+    <div class="stat-card"><div class="stat-num" id="ctr-yrs">0<span>+</span></div><div class="stat-label">Years experience</div></div>
+    <div class="stat-card"><div class="stat-num" id="ctr-proj">0<span>+</span></div><div class="stat-label">Projects delivered</div></div>
+    <div class="stat-card"><div class="stat-num" id="ctr-mod">0<span>+</span></div><div class="stat-label">Custom modules</div></div>
+  </div>
+
+  <div class="section-label">Skills &amp; Versions</div>
+  <div class="grid-2">
+    <div class="card">
+      <h3><i class="ti ti-chart-bar"></i>Technical skills</h3>
+      <div id="skill-bars"></div>
+    </div>
+    <div class="card">
+      <h3><i class="ti ti-timeline"></i>Odoo versions</h3>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </div>
+
+  <div class="section-label">Odoo Module Coverage</div>
+  <div class="card" style="margin-bottom:14px;">
+    <h3><i class="ti ti-puzzle"></i>Implementation coverage</h3>
+    <div class="module-grid" id="mod-grid"></div>
+  </div>
+
+  <div class="section-label">About &amp; Services</div>
+  <div class="grid-2">
+    <div class="card">
+      <h3><i class="ti ti-terminal"></i>Code sample</h3>
+      <div class="code-block" id="code-block">
+        <div class="code-line"><span class="kw">class</span> <span class="fn">SaleOrder</span><span class="br">(</span><span class="nm">models.Model</span><span class="br">):</span></div>
+        <div class="code-line">  <span class="nm">_inherit</span> <span class="br">=</span> <span class="st">'sale.order'</span></div>
+        <div class="code-line"></div>
+        <div class="code-line">  <span class="kw">@api</span><span class="br">.</span><span class="fn">depends</span><span class="br">(</span><span class="st">'order_line'</span><span class="br">)</span></div>
+        <div class="code-line">  <span class="kw">def</span> <span class="fn">_compute_margin</span><span class="br">(</span><span class="nm">self</span><span class="br">):</span></div>
+        <div class="code-line">    <span class="kw">for</span> <span class="nm">order</span> <span class="kw">in</span> <span class="nm">self</span><span class="br">:</span></div>
+        <div class="code-line">      <span class="nm">order</span><span class="br">.</span><span class="nm">margin</span> <span class="br">=</span> <span class="fn">sum</span><span class="br">(</span></div>
+        <div class="code-line">        <span class="nm">l</span><span class="br">.</span><span class="nm">margin</span> <span class="kw">for</span> <span class="nm">l</span> <span class="kw">in</span> <span class="nm">order</span><span class="br">.</span><span class="nm">order_line</span><span class="br">)</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3><i class="ti ti-list-check"></i>What I offer</h3>
+      <div id="offers"></div>
+    </div>
+  </div>
+
+  <div class="section-label">Connect</div>
+  <div class="card" style="margin-bottom:14px;">
+    <h3><i class="ti ti-at"></i>Get in touch</h3>
+    <div class="contact-row">
+      <div class="contact-icon"><i class="ti ti-brand-github"></i></div>
+      <div><div class="contact-text">github.com/odooer</div><div class="contact-sub">Custom modules &amp; open source</div></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-icon"><i class="ti ti-brand-linkedin"></i></div>
+      <div><div class="contact-text">linkedin.com/in/odooer</div><div class="contact-sub">Professional network</div></div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-icon"><i class="ti ti-mail"></i></div>
+      <div><div class="contact-text">odooer@email.com</div><div class="contact-sub">Open for freelance projects</div></div>
+    </div>
+  </div>
+
+  <div class="quote-card">
+    <p class="quote-text">Transforming business chaos into elegant ERP solutions — one module at a time.</p>
+    <p class="quote-author">— odooer</p>
+  </div>
+
+  <div class="footer">Built with <span>♥</span> &amp; Python · odooer © 2025</div>
+</div>
+
+<script>
+const skills=[{name:'Odoo Module Development',pct:95},{name:'Python / ORM',pct:90},{name:'XML / QWeb Reports',pct:88},{name:'OWL / JavaScript',pct:78},{name:'ERP Implementation',pct:92},{name:'REST API Integration',pct:82}];
+const timeline=[{ver:'Odoo 18',desc:'Latest — AI features & new UI'},{ver:'Odoo 17',desc:'Improved OWL & backend'},{ver:'Odoo 16',desc:'Multi-website, advanced accounting'},{ver:'Odoo 15',desc:'Email aliases & studio'},{ver:'Odoo 14',desc:'Spreadsheets & sign module'}];
+const modules=[{name:'Accounting',cls:'finance',icon:'ti-report-money'},{name:'Inventory',cls:'ops',icon:'ti-package'},{name:'CRM & Sales',cls:'sales',icon:'ti-trending-up'},{name:'HR & Payroll',cls:'hr',icon:'ti-users'},{name:'Manufacturing',cls:'ops',icon:'ti-tools'},{name:'Purchase',cls:'finance',icon:'ti-shopping-cart'},{name:'eCommerce',cls:'sales',icon:'ti-world'},{name:'Project',cls:'proj',icon:'ti-layout-kanban'},{name:'Helpdesk',cls:'proj',icon:'ti-headset'},{name:'Timesheets',cls:'proj',icon:'ti-clock'},{name:'Point of Sale',cls:'sales',icon:'ti-device-mobile'},{name:'Maintenance',cls:'tech',icon:'ti-settings-2'}];
+const offers=[{icon:'ti-circle-check',text:'Custom module development'},{icon:'ti-circle-check',text:'Full ERP implementation'},{icon:'ti-circle-check',text:'Data migration & version upgrade'},{icon:'ti-circle-check',text:'API & third-party integration'},{icon:'ti-circle-check',text:'Performance optimization'},{icon:'ti-circle-check',text:'Training & documentation'}];
+const typedPhrases=['Building custom Odoo modules...','Implementing ERP solutions...','Python · XML · OWL · PostgreSQL','Open for freelance projects ✓'];
+let phraseIdx=0,charIdx=0,deleting=false;
+const typedEl=document.getElementById('typed-text');
+function typeEffect(){const phrase=typedPhrases[phraseIdx];if(!deleting){typedEl.textContent=phrase.substring(0,charIdx+1);charIdx++;if(charIdx===phrase.length){deleting=true;setTimeout(typeEffect,2200);return;}}else{typedEl.textContent=phrase.substring(0,charIdx-1);charIdx--;if(charIdx===0){deleting=false;phraseIdx=(phraseIdx+1)%typedPhrases.length;}}setTimeout(typeEffect,deleting?38:72);}
+typeEffect();
+const pe=document.getElementById('particles');
+for(let i=0;i<22;i++){const p=document.createElement('div');p.className='particle';const dx=(Math.random()-0.5)*80+'px';p.style.cssText='left:'+Math.random()*100+'%;bottom:0;animation-duration:'+(4+Math.random()*7)+'s;animation-delay:'+Math.random()*7+'s;--dx:'+dx+';';pe.appendChild(p);}
+const sb=document.getElementById('skill-bars');
+skills.forEach((s,i)=>{sb.innerHTML+='<div class="skill-row"><div class="skill-header"><span class="skill-name">'+s.name+'</span><span class="skill-pct">'+s.pct+'%</span></div><div class="bar-bg"><div class="bar-fill" data-pct="'+s.pct+'" style="transition-delay:'+(0.5+i*0.1)+'s"></div></div></div>';});
+const tl=document.getElementById('timeline');
+timeline.forEach(t=>{tl.innerHTML+='<div class="tl-item"><div class="tl-dot"></div><div class="tl-ver">'+t.ver+'</div><div class="tl-desc">'+t.desc+'</div></div>';});
+const mg=document.getElementById('mod-grid');
+modules.forEach(m=>{mg.innerHTML+='<div class="mod-chip '+m.cls+'"><i class="ti '+m.icon+'"></i>'+m.name+'</div>';});
+const of=document.getElementById('offers');
+offers.forEach(o=>{of.innerHTML+='<div class="offer-row"><i class="ti '+o.icon+'"></i><span>'+o.text+'</span></div>';});
+document.querySelectorAll('.code-line').forEach((l,i)=>setTimeout(()=>l.classList.add('visible'),900+i*160));
+function animateCounter(el,target,duration){let start=0;const step=target/(duration/16);const timer=setInterval(()=>{start+=step;if(start>=target){el.innerHTML=target+'<span>+</span>';clearInterval(timer);return;}el.innerHTML=Math.floor(start)+'<span>+</span>';},16);}
+setTimeout(()=>{animateCounter(document.getElementById('ctr-yrs'),5,1000);animateCounter(document.getElementById('ctr-proj'),50,1200);animateCounter(document.getElementById('ctr-mod'),30,1400);},400);
+setTimeout(()=>{document.querySelectorAll('.bar-fill').forEach(b=>{b.style.width=b.dataset.pct+'%';});},300);
+</script>
+</body>
+</html>
