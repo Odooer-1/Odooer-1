@@ -21,7 +21,7 @@
 
 <div align="center">
 
-# 👨‍💻 About Me
+#  About Me
 
 </div>
 
@@ -31,7 +31,7 @@
 
 <table>
 <tr>
-<td align="center">🚀</td>
+<td align="center"></td>
 <td><b>Role</b></td>
 <td>Odoo ERP Consultant & Developer</td>
 </tr>
