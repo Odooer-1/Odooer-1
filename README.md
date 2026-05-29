@@ -88,11 +88,17 @@
 
 <div align="center">
 
-###  Mission
+### Our Mission
+
+<img src="https://media.tenor.com/rePDfDWO3XoAAAAd/hacking.gif" width="500"/>
+
+<br>
 
 > Transform businesses through automation, digital transformation, and scalable ERP solutions.
 
 </div>
+```
+
 
 
 
