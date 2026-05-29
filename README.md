@@ -23,8 +23,6 @@
 
 # 👨‍💻 About Me
 
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=30&pause=1000&color=714B67&center=true&vCenter=true&width=1000&lines=👋+Hi%2C+I'm+Odooer;🚀+Odoo+ERP+Consultant+%26+Developer;⚡+Business+Automation+Specialist;🌍+Digital+Transformation+Partner;📈+Building+Scalable+ERP+Solutions" />
-
 </div>
 
 <br>
@@ -102,29 +100,26 @@
 ```
 
 ---
-
 # 🚀 What I Do
 
-### ERP Implementation
+<div align="center">
 
-- Complete Odoo ERP Deployments
-- Multi-Company Configurations
-- Business Process Mapping
-- ERP Strategy Consulting
+<img width="300" src="https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif"/>
 
-### Development
+<br><br>
 
-- Custom Odoo Modules
-- API Integrations
-- Odoo Studio Customization
-- Workflow Automation
+### ⚙️ ERP Implementation
 
-### Digital Transformation
+### 💻 Custom Development
 
-- CRM Automation
-- Sales Optimization
-- Supply Chain Management
-- Manufacturing Process Automation
+### 🤖 Business Automation
+
+### 🔗 API Integrations
+
+### 📈 Digital Transformation
+
+</div>
+```
 
 ---
 
